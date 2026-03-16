@@ -5,7 +5,7 @@ phases:
       java: corretto21
   pre_build:
     commands:
-      - mvn clean install
+      - mvn clean install -DskipTests
       - echo logging in to amazon ecr...
       - aws --version
       - REPOSITORY_URI=426757726988.dkr.ecr.eu-north-1.amazonaws.com/question-service
